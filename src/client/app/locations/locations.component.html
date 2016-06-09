@@ -1,0 +1,14 @@
+<div class="content-block">
+  <div class="content-header">
+    Vos localisations
+  </div>
+  <location-form [location]="selectedLocation"></location-form>
+  <div>
+    <div class="form-table-row" *ngFor="let location of locations"
+        (click)="onSelect(location)"
+        [class.form-table-row-selected]="location===selectedLocation">
+        {{location.name}} ({{location.zipcode}})
+    </div>
+  </div>
+  <div class="new-item-button" (click)="onNewLocation()"></div>
+</div>

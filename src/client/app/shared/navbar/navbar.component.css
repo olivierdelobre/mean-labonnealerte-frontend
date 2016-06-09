@@ -1,0 +1,25 @@
+div.menubar {
+    margin: 0;
+    padding: 10px 0;
+    background: #4184f3;
+    color: #ffffff;
+    font-size: 130%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+div.menubar-item {
+    float: left;
+    border-left: 1px dotted white;
+    padding: 0 20px;
+}
+div.menubar-item:first-child {
+    border: 0;
+}
+div.menubar-item-right {
+    float: right;
+    padding: 0 20px;
+}
+div.menubar-item a {
+  color: #ffffff;
+  text-decoration: none;
+}

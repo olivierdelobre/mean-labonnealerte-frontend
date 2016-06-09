@@ -1,0 +1,16 @@
+<div style="padding: 15px 25px;" *ngIf="location">
+    <form [ngFormModel]="locationForm" (ngSubmit)="updateLocation()">
+        <input type="hidden" [ngModel]="location.id" ngControl="id" #id="ngForm" />
+        <div class="form-group">
+            <label for="locationName">Nom</label>
+            <input class="form-control" id="locationName" [(ngModel)]="location.name" ngControl="name" #name="ngForm" placeholder="Ex : Domicile" autocomplete="off" />
+            <form-control-messages control="name"></form-control-messages>
+        </div>
+        <div class="form-group">
+            <label for="locationZipcode">Code postal</label>
+            <input class="form-control" id="locationZipcode" [(ngModel)]="location.zipcode" ngControl="zipcode" #zipcode="ngForm" placeholder="Ex : 75000" minlength="5" maxlength="5" autocomplete="off" />
+            <form-control-messages control="zipcode"></form-control-messages>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!locationForm.valid">Enregistrer</button>
+    </form>
+</div>

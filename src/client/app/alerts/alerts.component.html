@@ -1,0 +1,15 @@
+<div class="content-block">
+  <div class="content-header">
+    Vos alertes
+  </div>
+  <app-alert [alert]="selectedAlert"></app-alert>
+  <div>
+    <div class="form-table-row" *ngFor="let alert of alerts"
+        (click)="onSelect(alert)"
+        [class.form-table-row-selected]="alert===selectedAlert">
+        {{alert.name}}
+        <div class="alert-url">{{alert.url}}</div>
+    </div>
+  </div>
+  <div class="new-item-button" (click)="onNewAlert()"></div>
+</div>

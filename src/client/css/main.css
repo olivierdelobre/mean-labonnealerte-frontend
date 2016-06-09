@@ -1,0 +1,116 @@
+/* Reset */
+html,
+body,
+div {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Box-sizing border-box */
+* {
+  box-sizing: border-box;
+}
+
+/* Set up a default font and some padding to provide breathing room */
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+ul {
+  margin: 10px 0 0 0;
+  padding: 0 0 0 20px;
+}
+
+li {
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+input {
+  border: 1px solid #106cc8;
+  font-size: 14px;
+  height: 40px;
+  outline: none;
+  padding: 8px;
+}
+
+button {
+  background-color: #106cc8;
+  border-style: none;
+  color: rgba(255, 255, 255, 0.87);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  height: 40px;
+  padding: 8px 18px;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #28739e;
+}
+
+div.content-block {
+    background: #ffffff none repeat scroll 0 0;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    width: 500px;
+    position: relative;
+}
+div.content-header {
+    margin: 0;
+    padding: 10px 20px;
+    background: #4184f3;
+    color: #ffffff;
+    font-size: 160%;
+}
+div.form-table-row {
+    margin: 0;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+div.form-table-row-selected {
+    border-left: 5px solid #4184f3;
+    padding-left: 15px;
+}
+div.form-table-row:first-child {
+    border-top: 1px solid #e0e0e0;
+}
+
+div.new-item-button {
+  width: 40px;
+  height: 40px;
+  background: url('../../assets/images/ic_add_white_24px.svg') no-repeat 8px 8px #4184f3;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+}
+div.new-item-button:hover {
+  background: url('../../assets/images/ic_add_white_24px.svg') no-repeat 8px 8px #6396ff;
+}
+
+/*
+.ng-valid[required] {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid {
+  border-left: 5px solid #a94442;
+}
+*/

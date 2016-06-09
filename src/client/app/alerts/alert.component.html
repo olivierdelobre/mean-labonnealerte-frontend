@@ -1,0 +1,21 @@
+<div style="padding: 15px 25px;" *ngIf="alert">
+    <form [ngFormModel]="alertForm" (ngSubmit)="updateAlert()">
+        <input type="hidden" [ngModel]="alert.id" ngControl="id" #id="ngForm" />
+        <div class="form-group">
+            <label for="alertName">Nom de l'alerte</label>
+            <input class="form-control" id="alertName" [(ngModel)]="alert.name" ngControl="name" #name="ngForm" placeholder="Ex : Appartement Paris" autocomplete="off" />
+            <form-control-messages control="name"></form-control-messages>
+        </div>
+        <div class="form-group">
+            <label for="alertUrl">URL</label>
+            <input class="form-control" id="alertUrl" [(ngModel)]="alert.url" ngControl="url" #url="ngForm" placeholder="Ex : https://www.leboncoin.fr/..." autocomplete="off" />
+            <form-control-messages control="url"></form-control-messages>
+        </div>
+        <div class="form-group">
+            <label for="alertDistance">Distance limite (0 = pas de limite)</label>
+            <input class="form-control" id="alertDistance" [(ngModel)]="alert.distancelimit" ngControl="distancelimit" #distancelimit="ngForm" placeholder="distance en km" autocomplete="off" />
+            <form-control-messages control="distancelimit"></form-control-messages>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!alertForm.valid">Enregistrer</button>
+    </form>
+</div>
